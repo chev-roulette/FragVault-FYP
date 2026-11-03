@@ -110,3 +110,10 @@ FragVault includes an interactive **Attack Simulation** module to demonstrate sy
 * **Course**: BSc (Hons) in Computer Science (Cyber Security) – Asia Pacific University (APU)
 
 * **Supervisor**: Mr. Mohd Hanis Bin Jenalis
+
+
+---
+
+
+## ⚠️ Security Notice & Disclaimer
+FragVault is a proof-of-concept prototype developed solely for academic research and educational purposes as part of a Final Year Project. The included attack simulation features—such as testing fragment exfiltration and cross-vault access using a Kali Linux virtual machine are designed to run strictly within a controlled, local Docker environment. Do not attempt to execute these simulation scripts or target external systems without explicit authorization.
