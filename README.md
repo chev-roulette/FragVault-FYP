@@ -36,9 +36,6 @@ Developed as a Final Year Project (FYP) for a Bachelor of Science (Honours) in C
 $$\text{Fragment C} = \text{Token} \oplus \text{Fragment A} \oplus \text{Fragment B}$$
 
 
-
-
-
 2. **Storage**: Each fragment is hashed with SHA-256 and sent to its respective isolated PostgreSQL vault table.
 
 
