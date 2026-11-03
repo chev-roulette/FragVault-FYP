@@ -1,0 +1,12 @@
+{
+    "id": "f63efdf8",
+    "service": "Notion API",
+    "environment": "Internal",
+    "owner": "Documentation Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "20e35adb78e420c30553bfb4e17d95c7217ea85c3bab10a047f184bc71783157",
+        "vaultB": "a3c49803b41e6a6c28283e41e47b94fe38bd027b6ea079804cdf6fb94bb79608",
+        "vaultC": "5eb1a7cbd836f0966f05986456d06b701cbe051994e0635abe17d2b837b33dc2"
+    }
+}

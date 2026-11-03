@@ -1,0 +1,12 @@
+{
+    "id": "9fe967e9",
+    "service": "Azure",
+    "environment": "Production",
+    "owner": "Cloud Operations Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "c478932eff1f32a5f03d07b2934c4ab27e11e302c52d44e29203ac12baf15a63",
+        "vaultB": "eaec99e758f7b681e2780cfe50f585d98f935aec64478c08cd8076c9188aa4c3",
+        "vaultC": "ed78906e8ca8bce3800d51b791952285c839de9f5d7cfd9ab68ad160094ac1f9"
+    }
+}

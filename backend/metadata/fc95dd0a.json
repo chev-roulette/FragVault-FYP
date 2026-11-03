@@ -1,0 +1,12 @@
+{
+    "id": "fc95dd0a",
+    "service": "DigitalOcean",
+    "environment": "Testing",
+    "owner": "Platform Engineering Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "580d723abca24cae798f5f68df4e2e7f7ff8cf82523de86b4cbe86d2bd045f21",
+        "vaultB": "34dec3ef62780a6e642fe30596f96b9133474a2cbbe51d69a8253b431538b18f",
+        "vaultC": "49228123bc949292b0029b420007db4daee6296a675c3923c30744ccfbea86d6"
+    }
+}

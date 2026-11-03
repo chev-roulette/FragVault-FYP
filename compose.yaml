@@ -1,0 +1,133 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: xor_fragment_postgres
+
+    environment:
+      POSTGRES_USER: xoruser
+      POSTGRES_PASSWORD: xorpass
+      POSTGRES_DB: xorvault
+
+    ports:
+      - "55432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres-config/pg_hba.conf:/etc/postgresql/pg_hba.conf:ro
+      - ./postgres-logs:/var/log/postgresql
+
+    command:
+      - postgres
+      - -c
+      - hba_file=/etc/postgresql/pg_hba.conf
+      - -c
+      - listen_addresses=*
+      - -c
+      - logging_collector=on
+      - -c
+      - log_destination=jsonlog
+      - -c
+      - log_directory=/var/log/postgresql
+      - -c
+      - log_filename=fragvault-%Y-%m-%d_%H%M%S.log
+      - -c
+      - log_file_mode=0644
+      - -c
+      - log_connections=on
+      - -c
+      - log_disconnections=on
+      - -c
+      - log_min_error_statement=error
+      - -c
+      - log_parameter_max_length=0
+      - -c
+      - log_rotation_age=1440
+      - -c
+      - log_rotation_size=0
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U xoruser -d xorvault
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+    restart: unless-stopped
+
+
+  audit-postgres:
+    image: postgres:17
+    container_name: xoracle_audit_postgres
+
+    environment:
+      POSTGRES_USER: audituser
+      POSTGRES_PASSWORD: auditpass
+      POSTGRES_DB: xorvault_audit
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - audit_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U audituser -d xorvault_audit
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+    restart: unless-stopped
+
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: xoracle-backend
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./backend/vaults:/app/vaults
+      - ./backend/metadata:/app/metadata
+      - ./postgres-logs:/app/postgres-logs:ro
+
+    environment:
+      DATABASE_URL: postgresql://xoruser:xorpass@postgres:5432/xorvault
+      AUDIT_DATABASE_URL: postgresql://audituser:auditpass@audit-postgres:5432/xorvault_audit
+      POSTGRES_LOG_DIR: /app/postgres-logs
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+      audit-postgres:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: xoracle-frontend
+
+    ports:
+      - "5173:5173"
+
+    environment:
+      VITE_API_URL: http://127.0.0.1:8000
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
+  audit_postgres_data:

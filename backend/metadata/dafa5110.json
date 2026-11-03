@@ -1,0 +1,12 @@
+{
+    "id": "dafa5110",
+    "service": "Slack",
+    "environment": "Internal",
+    "owner": "Corporate Automation Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "fac1ee76ccbd2e3fd204b73b98f65fb713b745a89af0778c5b82c1e746b056a3",
+        "vaultB": "6a67ed3ace777be67418c779b7ebf94eac78b573655da92019ecc551ccc64e83",
+        "vaultC": "622f44949204607d1d9c50701b00cdc70409b7ee8c116b49d1bd78f5b7593812"
+    }
+}

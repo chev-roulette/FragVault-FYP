@@ -1,0 +1,12 @@
+{
+    "id": "641cb6cf",
+    "service": "Docker Hub",
+    "environment": "CI/CD",
+    "owner": "Container Infrastructure Team",
+    "created_at": "2026-06-12 11:28:00",
+    "fragment_hashes": {
+        "vaultA": "18447c1c7666c7d14e01c488780e6a6a9f5862d2f1ddb994c755ef84df0bd367",
+        "vaultB": "a1ff667dec45709791d621acedbcc57919985f2d2e6e5e11e35482207a2ef55b",
+        "vaultC": "7374c16258c927f7f9e9aaacfa068ecada722d96d89d11487231a0c1207f617d"
+    }
+}

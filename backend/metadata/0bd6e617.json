@@ -1,0 +1,12 @@
+{
+    "id": "0bd6e617",
+    "service": "Firebase",
+    "environment": "Development",
+    "owner": "Mobile Backend Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "6e3fba921b670caf479edab843b019faae5cdec165a59848e305ca7692773f5f",
+        "vaultB": "32e2eb164d44831f27685214374f77fc016869de84de714d39c4ce0ee1a54a8d",
+        "vaultC": "5d9a53aa5e840a0bed2416c8eb4d71dcdff52a4647165853dbac7b207ed106ab"
+    }
+}

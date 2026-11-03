@@ -1,0 +1,12 @@
+{
+    "id": "0ae7b794",
+    "service": "Slack",
+    "environment": "Internal",
+    "owner": "Corporate Automation Team",
+    "created_at": "2026-06-12 11:28:00",
+    "fragment_hashes": {
+        "vaultA": "3784179e6b3f513ceaaffcfb470102023ca66d757914ec198d5ea6a508a966a5",
+        "vaultB": "d385f5e57919b248a2957865e9a73500e6dc6da6baca6062fdface6de694efa7",
+        "vaultC": "ebdf3910215dd18402fa70df8fdc76b7b3f1216a8aaf8e7d76fc113388029b47"
+    }
+}

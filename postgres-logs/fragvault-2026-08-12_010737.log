@@ -1,0 +1,2 @@
+2026-08-12 01:07:37.284 UTC [1] LOG:  ending log output to stderr
+2026-08-12 01:07:37.284 UTC [1] HINT:  Future log output will go to log destination "jsonlog".

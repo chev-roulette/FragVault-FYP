@@ -1,0 +1,12 @@
+{
+    "id": "7819f648",
+    "service": "MongoDB Atlas",
+    "environment": "Staging",
+    "owner": "Database Engineering Team",
+    "created_at": "2026-06-12 11:27:58",
+    "fragment_hashes": {
+        "vaultA": "f842778737582d8f214774684b0fb8d504eef2009b1da2306f4ed491ea42abf1",
+        "vaultB": "4e9a0b22c93586a1ce2ec896c48f33e949af926eb11d2107cccdfee03f8a1ec6",
+        "vaultC": "aeeb56c061d11a748b66fd48c46d02c5d56a92b110326b755d2935fe7b317628"
+    }
+}
